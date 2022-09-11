@@ -16,7 +16,10 @@ const list = document.querySelector(".gallery");
 list.style.display = "flex";
 list.style.listStyle = "none";
 
-const imgList = images.map(
-  (image) => `<li><img src=${image.url} alt=${image.alt} width=100%></img></li>`
-);
+const imgList = images
+  .map(
+    (image) =>
+      `<li><img src=${image.url} alt=${image.alt} width=100%></img></li>`
+  )
+  .join("");
 list.insertAdjacentHTML("afterbegin", imgList);
